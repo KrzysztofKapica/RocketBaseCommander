@@ -3,7 +3,7 @@ package org.example;
 import java.util.Random;
 
 public class ProbabilityOfHit {
-    public ProbabilityOfHit(int givenCityDistance, int givenRocketRange) {
+    public boolean ProbabilityOfHit(int givenCityDistance, int givenRocketRange)  {
 
         Random random = new Random();
 
@@ -11,11 +11,26 @@ public class ProbabilityOfHit {
         int resultInt = (int) result;
 
         int randomNumber = random.nextInt(100);
-        if (randomNumber <= resultInt) {
-            System.out.println("The target is HIT!!!");
-            // tu dodac target.ListOfTargetsUpdate(playersChoiceTarget,20) tutaj przy trafieniu zwiekszyc damage celu
-        } else {
-            System.out.println("The rocket missed the target...");
+        System.out.println("There's " + resultInt + "% of chance to hit the target.");
+        System.out.println();
+
+        wait(1000);
+        System.out.print('.');
+        wait(1000);
+        System.out.print('.');
+        wait(1000);
+        System.out.print('.');
+        wait(1000);
+        System.out.println();
+
+        return randomNumber <= resultInt;
+    }
+
+    public static void wait(int ms) {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
         }
     }
 }

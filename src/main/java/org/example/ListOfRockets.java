@@ -5,9 +5,9 @@ import java.util.List;
 
 public class ListOfRockets {
 
-    Rocket r1 = new Rocket(1,"Short range rocket", 250);
-    Rocket r2 = new Rocket(2,"Medium range rocket", 500);
-    Rocket r3 = new Rocket(3,"Long range rocket", 1000);
+    Rocket r1 = new Rocket(1,"Short range rocket", 250, 5);
+    Rocket r2 = new Rocket(2,"Medium range rocket", 500, 10);
+    Rocket r3 = new Rocket(3,"Long range rocket", 1000, 20);
 
     List<Rocket> rocketList = new ArrayList<>();
 
@@ -30,5 +30,9 @@ public class ListOfRockets {
 
     public int RocketRange(int index) {
         return rocketList.get(index).getRange();
+    }
+
+    public int RocketCausingDamage(int index) {
+        return rocketList.get(index).getCausingDamage();
     }
 }

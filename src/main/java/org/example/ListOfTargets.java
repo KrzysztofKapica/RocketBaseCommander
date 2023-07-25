@@ -21,21 +21,29 @@ public class ListOfTargets {
         targetList.add(t5);
     }
 
-    public void ListOfAllTargets(){
+    public void listOfAllTargets() {
         for (Target t : targetList) {
             System.out.println(t);
         }
     }
 
-    public void ListOfTargetsUpdate(int index, int damage) {
+    public Target oneCityFromAList(int index) {
+        return targetList.get(index);
+    }
+
+    public void listOfTargetsUpdate(int index, int damage) {
         targetList.get(index).setDamage(targetList.get(index).getDamage() + damage);
     }
 
-    public int TargetDistance(int index) {
+    public int targetDistance(int index) {
         return targetList.get(index).getDistance();
     }
 
     public int lengthOfTargetList() {
         return targetList.size() - 1;
+    }
+
+    public int targetDamage(int index) {
+        return targetList.get(index).getDamage();
     }
 }
