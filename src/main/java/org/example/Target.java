@@ -1,9 +1,9 @@
 package org.example;
 
 public class Target {
-    private int id;
-    private String name;
-    private int distance;
+    private final int id;
+    private final String name;
+    private final int distance;
     private int damage;
 
     public Target(int id, String name, int distance, int damage) {
@@ -13,28 +13,12 @@ public class Target {
         this.damage = damage;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getDistance() {
         return distance;
-    }
-
-    public void setDistance(int distance) {
-        this.distance = distance;
     }
 
     public int getDamage() {

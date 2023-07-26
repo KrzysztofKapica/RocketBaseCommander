@@ -15,7 +15,6 @@ public class ListOfRockets {
         rocketList.add(r1);
         rocketList.add(r2);
         rocketList.add(r3);
-
     }
 
     public void ListOfAllRockets() {
@@ -24,15 +23,15 @@ public class ListOfRockets {
         }
     }
 
-    public void RocketChoice(int id) {
-        rocketList.get(id);
-    }
-
     public int RocketRange(int index) {
         return rocketList.get(index).getRange();
     }
 
     public int RocketCausingDamage(int index) {
         return rocketList.get(index).getCausingDamage();
+    }
+
+    public int lengthOfRocketList() {
+        return rocketList.size() - 1;
     }
 }

@@ -3,7 +3,7 @@ package org.example;
 import java.util.Random;
 
 public class ProbabilityOfHit {
-    public boolean ProbabilityOfHit(int givenCityDistance, int givenRocketRange)  {
+    public boolean countProbabilityOfHit(int givenCityDistance, int givenRocketRange) {
 
         Random random = new Random();
 
